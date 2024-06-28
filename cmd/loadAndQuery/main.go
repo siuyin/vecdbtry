@@ -99,7 +99,7 @@ func loadDocuments() []chromem.Document {
 func addDoc(docs []chromem.Document, rec *emb.Rec) []chromem.Document {
 	d := chromem.Document{
 		ID:      rec.ID,
-		Content: rec.Title + rec.Content,
+		Content: rec.Title + " | " + rec.Content,
 	}
 	d.Embedding = append(d.Embedding, rec.Embedding...)
 	docs = append(docs, d)
